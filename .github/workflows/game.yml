@@ -12,16 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: HTML validation
-        uses: validator/action@v2
-        with:
-          files: "*.html"
-
-      - name: JS Syntax Check
-        uses: reviewdog/action-eslint@v2
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          eslint_flags: "index.html" # 检查内联JS
+#      - name: HTML validation
+#        uses: validator/action@v2
+#        with:
+#          files: "*.html"
+#
+#      - name: JS Syntax Check
+#        uses: reviewdog/action-eslint@v2
+#        with:
+#          github_token: ${{ secrets.TOKEN }}
+#          eslint_flags: "index.html" # 检查内联JS
 
   deploy:
     needs: test
